@@ -103,8 +103,7 @@ class MainActivity : AppCompatActivity() {
       R.id.menu_edit -> {
         // Mở Activity để chỉnh sửa sinh viên
         val intent = Intent(this, EditStudentActivity::class.java)
-        intent.putExtra("studentName", selectedStudent.studentName)
-        intent.putExtra("studentId", selectedStudent.studentId)
+        intent.putExtra("student", selectedStudent)
         intent.putExtra("position", info.position)
         startActivityForResult(intent, REQUEST_EDIT_STUDENT)
         true
